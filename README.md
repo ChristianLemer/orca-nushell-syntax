@@ -1,4 +1,4 @@
-# nushell-syntax-orca
+# orca-nushell-syntax
 
 Nushell syntax highlighting for [Orca](https://www.onorca.dev): `.nu` scripts and `.nuon` data files.
 
