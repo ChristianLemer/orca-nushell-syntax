@@ -1,0 +1,8 @@
+# Notes, plans and specs live outside the repository, never in git.
+# No trailing slash: a symlink is a file to git (see orca.yaml).
+docs
+meta
+
+.superpowers
+node_modules
+.DS_Store
