@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stablyai/orca/main/docs/schemas/plugins/orca-plugin.v2.schema.json",
+  "manifestVersion": 2,
+  "execution": "data",
+  "id": "nushell-syntax",
+  "name": "Nushell",
+  "version": "0.1.0",
+  "description": "Syntax highlighting, comment toggling and bracket matching for Nushell scripts (.nu) and data files (.nuon).",
+  "license": "MIT",
+  "repository": "https://github.com/ChristianLemer/orca-nushell-syntax",
+  "engines": { "orca": ">=1.4.246" },
+  "contributes": {
+    "syntaxes": [
+      {
+        "id": "nushell",
+        "title": "Nushell",
+        "scopeName": "source.nushell",
+        "path": "syntaxes/nushell.tmLanguage.json",
+        "configuration": "syntaxes/language-configuration.json",
+        "extensions": [".nu", ".nuon"]
+      }
+    ]
+  },
+  "capabilities": []
+}

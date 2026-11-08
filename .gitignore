@@ -6,3 +6,5 @@ meta
 .superpowers
 node_modules
 .DS_Store
+
+.orca

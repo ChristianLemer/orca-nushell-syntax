@@ -2,7 +2,7 @@
 
 Nushell syntax highlighting for [Orca](https://www.onorca.dev): `.nu` scripts and `.nuon` data files.
 
-> **Status: in design.** Nothing is released yet.
+> **Status: not released yet.** It can be loaded from a checkout; see [AGENTS.md](AGENTS.md#checking-a-change).
 
 ## What it adds
 

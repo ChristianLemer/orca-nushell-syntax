@@ -43,6 +43,10 @@ Then open the samples and look: keywords, strings, interpolation, comments, reco
 closures. Toggle a comment and type a bracket. Orca reloads on save; `orca plugin dev unload .`
 removes it. Add to the samples whatever a change touches: they are the only regression check.
 
+`orca plugin inspect .` refuses a checkout that holds the `meta` and `docs` links ("symlink not
+allowed in plugin content"). They are never committed, so an install from Git never sees them;
+`validate` and `dev load` accept the checkout as it is.
+
 ## The grammar
 
 - `syntaxes/nushell.tmLanguage.json` is upstream's file, unchanged. Update it only with
