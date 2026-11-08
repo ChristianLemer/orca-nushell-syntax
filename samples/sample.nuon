@@ -1,0 +1,20 @@
+# A NUON sample: Nushell Object Notation, data only.
+{
+  name: "orca-nushell-syntax",
+  version: "0.1.0",
+  bare_word: nushell,
+  enabled: true,
+  missing: null,
+  count: 42,
+  ratio: 0.75,
+  size: 2MiB,
+  timeout: 30sec,
+  released: 2026-11-08,
+  tags: [orca, nushell, syntax],
+  raw: r#'raw 'text''#,
+  people: [[name, age]; [Alice, 31], [Bob, 27]],
+  nested: {
+    "quoted key": "value",
+    list: [1, 2, 3],
+  },
+}
