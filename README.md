@@ -15,9 +15,10 @@ It is a data plugin: it runs no code, and installs in one click.
 
 The grammar is `syntaxes/nushell.tmLanguage.json` from
 [nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang), by the Nushell
-Project Developers, under the MIT license. This plugin packages it for Orca and keeps it in
-step with upstream.
+Project Developers, under the MIT license. It is copied unchanged, currently from
+upstream commit `ffd0e93105a9bad1303583a43f47eae7d0e34dab`.
+This plugin packages it for Orca; `scripts/sync-grammar.nu` brings it in step with upstream.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE), which also carries the grammar's notice.
