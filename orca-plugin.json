@@ -8,7 +8,9 @@
   "description": "Syntax highlighting, comment toggling and bracket matching for Nushell scripts (.nu) and data files (.nuon).",
   "license": "MIT",
   "repository": "https://github.com/ChristianLemer/orca-nushell-syntax",
-  "engines": { "orca": ">=1.4.246" },
+  "engines": {
+    "orca": ">=1.4.246"
+  },
   "contributes": {
     "syntaxes": [
       {
@@ -17,9 +19,23 @@
         "scopeName": "source.nushell",
         "path": "syntaxes/nushell.tmLanguage.json",
         "configuration": "syntaxes/language-configuration.json",
-        "extensions": [".nu", ".nuon"]
+        "extensions": [
+          ".nu",
+          ".nuon"
+        ]
       }
     ]
   },
-  "capabilities": []
+  "capabilities": [],
+  "cover": {
+    "path": "images/cover.png",
+    "alt": "A Nushell script in Orca's editor, with comments, keywords, strings, interpolation and a typed custom command highlighted"
+  },
+  "screenshots": [
+    {
+      "path": "images/editor.png",
+      "alt": "Highlighted Nushell values with units and dates, records, tables, closures, match, operators and external commands in Orca's editor",
+      "caption": "Values, records, closures and control flow"
+    }
+  ]
 }
