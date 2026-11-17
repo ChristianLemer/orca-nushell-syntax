@@ -33,13 +33,13 @@
   "capabilities": [],
   "cover": {
     "path": "images/cover.png",
-    "alt": "A Nushell script in Orca's editor, with comments, keywords, strings, interpolation and a typed custom command highlighted"
+    "alt": "A Nushell script in Orca's editor: a typed custom command, strings with interpolation, numbers, durations, file sizes, dates and ranges, each in its own color"
   },
   "screenshots": [
     {
       "path": "images/editor.png",
-      "alt": "Highlighted Nushell values with units and dates, records, tables, closures, match, operators and external commands in Orca's editor",
-      "caption": "Values, records, closures and control flow"
+      "alt": "Nushell closures, pipelines, match, loops, try and catch, operators, external commands, environment variables, aliases and modules highlighted in Orca's editor",
+      "caption": "Closures, control flow, operators and modules"
     }
   ]
 }

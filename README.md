@@ -2,7 +2,7 @@
 
 Nushell syntax highlighting for [Orca](https://www.onorca.dev): `.nu` scripts and `.nuon` data files.
 
-![Highlighted Nushell values with units and dates, records, tables, closures, match, operators and external commands in Orca's editor](images/editor.png)
+![A Nushell script in Orca's editor: a typed custom command, strings with interpolation, numbers, durations, file sizes, dates and ranges, each in its own color](images/cover.png)
 
 ## What it adds
 
