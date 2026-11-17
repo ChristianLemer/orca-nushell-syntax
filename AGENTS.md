@@ -26,10 +26,13 @@ Everything in the repository is English: files, commit messages, branch names, p
 
 ## Git
 
-- `main` moves only through pull requests. Never commit to it directly or force-push it.
-- One short branch per change, named for the work, merged with a **rebase**, deleted at merge.
-- Each commit is one decision with its reason in the message.
-- An agent opens the pull request; the maintainer merges.
+- One short branch and one pull request per subject, named for the work. Several commits are
+  welcome, each one decision with its reason in the message.
+- An agent opens the pull request; the maintainer merges, with a **rebase**. The branch is
+  deleted at merge.
+- A small fix that changes nothing in the plugin (a typo, a wording) may go straight to `main`
+  when the maintainer asks for it. Without that request, an agent opens a pull request.
+- Never force-push `main`.
 
 ## Checking a change
 
