@@ -15,6 +15,9 @@ syntaxes/nushell-LICENSE.txt          upstream's license, verbatim
 syntaxes/language-configuration.json  comments, brackets, auto-closing and surrounding pairs
 scripts/sync-grammar.nu               fetches the grammar at an upstream commit
 samples/sample.nu, sample.nuon        the files to open in Orca and look at
+tests/                                token snapshots of the samples (Node, development only)
+.github/workflows/check.yml           what runs on every pull request and push to main
+.github/workflows/upstream.yml        weekly: opens an issue when upstream changes the grammar
 ```
 
 The Orca reference is `docs/reference/plugin-authoring.md` and `plugin-syntax.md` in
@@ -45,7 +48,23 @@ orca plugin dev load .     # loads the folder as local.nushell-syntax
 
 Then open the samples and look: keywords, strings, interpolation, comments, records, tables,
 closures. Toggle a comment and type a bracket. Orca reloads on save; `orca plugin dev unload .`
-removes it. Add to the samples whatever a change touches: they are the only regression check.
+removes it. Add to the samples whatever a change touches.
+
+The samples are also tokenized in CI and compared with `tests/snapshots/*.snap`, so a change in
+how they are colored shows as a diff:
+
+```bash
+cd tests && npm ci --ignore-scripts
+npm test          # fails when the tokens differ from the snapshots
+npm run update    # rewrites the snapshots; read the diff before committing it
+```
+
+A snapshot records what the grammar does, right or wrong. It catches a change, not a mistake:
+looking at the samples in Orca stays the check that the colors are right.
+
+CI (`.github/workflows/check.yml`) also runs Orca's own validator at a pinned Orca commit, and
+`scripts/sync-grammar.nu --check`, which fails when the grammar or its license is not upstream's
+file at the commit the README names.
 
 `orca plugin inspect .` refuses a checkout that holds the `meta` and `docs` links ("symlink not
 allowed in plugin content"). They are never committed, so an install from Git never sees them;
@@ -55,7 +74,8 @@ allowed in plugin content"). They are never committed, so an install from Git ne
 
 - `syntaxes/nushell.tmLanguage.json` and `syntaxes/nushell-LICENSE.txt` are upstream's files,
   unchanged. Update them only with `scripts/sync-grammar.nu`, in a commit of its own whose
-  message names the upstream commit.
+  message names the upstream commit. Update the token snapshots in the commit after it, so
+  their diff shows what the sync changed.
 - Whether to patch it locally is not decided yet. Until then, don't edit it by hand: report
   what looks wrong, with the sample line that shows it.
 - Keep the attribution: upstream's license beside the grammar, and the README's credits.

@@ -25,6 +25,13 @@ Open `samples/sample.nu` and `samples/sample.nuon` in Orca and look. If your cha
 construct the samples do not show, add it to them. `orca plugin dev unload .` removes the
 plugin.
 
+CI tokenizes the samples and compares the result with `tests/snapshots/`. After changing a
+sample, update them and read the diff:
+
+```sh
+cd tests && npm ci --ignore-scripts && npm run update
+```
+
 ## Pull requests
 
 - One pull request per subject, with one commit per decision and its reason in the message.

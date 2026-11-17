@@ -1,0 +1,109 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+env:
+  # Orca commit whose validator checks the plugin: v1.4.261. Bump it deliberately.
+  ORCA_REF: 92d4266cc4ffa945dbc1fa52850e62448d2dfc1c
+
+jobs:
+  validate:
+    name: Orca's validator
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the plugin
+        uses: actions/checkout@v7
+        with:
+          path: plugin
+          persist-credentials: false
+
+      - name: Check out Orca
+        uses: actions/checkout@v7
+        with:
+          repository: stablyai/orca
+          ref: ${{ env.ORCA_REF }}
+          path: orca
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v6
+        with:
+          package_json_file: orca/package.json
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: orca/pnpm-lock.yaml
+
+      # Why no install scripts: the validator needs only the JavaScript dependencies, not Electron.
+      - name: Install Orca's validator
+        working-directory: orca
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts
+          pnpm run build:packages
+
+      - name: Validate the manifest and the files it names
+        working-directory: orca
+        run: pnpm validate:plugin ../plugin
+
+  grammar:
+    name: Grammar is upstream's, unchanged
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: hustcer/setup-nu@v3
+        with:
+          version: "0.117.0"
+      - run: nu scripts/sync-grammar.nu --check
+
+  tokens:
+    name: Token snapshots of the samples
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: tests
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: tests/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm test
+
+  version:
+    name: Tag, manifest and changelog agree
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="$(jq -r .version orca-plugin.json)"
+          if [ "v$version" != "$TAG" ]; then
+            echo "::error::tag $TAG, but orca-plugin.json says $version"
+            exit 1
+          fi
+          if ! grep -q "^## $version " CHANGELOG.md; then
+            echo "::error::CHANGELOG.md has no entry for $version"
+            exit 1
+          fi
