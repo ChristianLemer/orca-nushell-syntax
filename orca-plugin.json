@@ -7,6 +7,10 @@
   "version": "0.1.0",
   "description": "Syntax highlighting, comment toggling and bracket matching for Nushell scripts (.nu) and data files (.nuon).",
   "license": "MIT",
+  "author": {
+    "name": "Christian Lemer",
+    "url": "https://github.com/ChristianLemer"
+  },
   "repository": "https://github.com/ChristianLemer/orca-nushell-syntax",
   "engines": {
     "orca": ">=1.4.246"
