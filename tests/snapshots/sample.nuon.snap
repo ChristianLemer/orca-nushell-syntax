@@ -1,0 +1,176 @@
+># A NUON sample: Nushell Object Notation, data only.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.nushell comment.nushell
+>{
+#^ source.nushell meta.expression.braced.nushell punctuation.section.block.begin.bracket.curly.nushell
+>  name: "orca-nushell-syntax",
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#      ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#       ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell punctuation.definition.string.begin.nushell
+#         ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#             ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#              ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#                     ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#                      ^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#                            ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell punctuation.definition.string.end.nushell
+#                             ^^ source.nushell meta.expression.braced.nushell
+>  version: "0.1.0",
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#           ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell punctuation.definition.string.begin.nushell
+#            ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#             ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#              ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#               ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#                ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#                 ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell punctuation.definition.string.end.nushell
+#                  ^^ source.nushell meta.expression.braced.nushell
+>  bare_word: nushell,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#           ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#            ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#             ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell
+#                    ^^ source.nushell meta.expression.braced.nushell
+>  enabled: true,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#           ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.language.nushell
+#               ^^ source.nushell meta.expression.braced.nushell
+>  missing: null,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#           ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.language.nushell
+#               ^^ source.nushell meta.expression.braced.nushell
+>  count: 42,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#       ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#         ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.numeric.nushell
+#           ^^ source.nushell meta.expression.braced.nushell
+>  ratio: 0.75,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#       ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#         ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.numeric.nushell
+#             ^^ source.nushell meta.expression.braced.nushell
+>  size: 2MiB,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#      ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#       ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#        ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.numeric.nushell
+#            ^^ source.nushell meta.expression.braced.nushell
+>  timeout: 30sec,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#           ^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.numeric.nushell
+#                ^^ source.nushell meta.expression.braced.nushell
+>  released: 2026-11-08,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#           ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#            ^^^^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell constant.numeric.nushell
+#                      ^^ source.nushell meta.expression.braced.nushell
+>  tags: [orca, nushell, syntax],
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#      ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#       ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.brace.square.begin.nushell
+#         ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell string.bare.nushell
+#             ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell punctuation.separator.nushell
+#              ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell
+#               ^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell string.bare.nushell
+#                      ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell punctuation.separator.nushell
+#                       ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell
+#                        ^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell string.bare.nushell
+#                              ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.brace.square.end.nushell
+#                               ^^ source.nushell meta.expression.braced.nushell
+>  raw: r#'raw 'text''#,
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#     ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#      ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#       ^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.raw.nushell punctuation.definition.string.begin.nushell
+#          ^^^^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.raw.nushell
+#                    ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.raw.nushell punctuation.definition.string.end.nushell
+#                      ^^ source.nushell meta.expression.braced.nushell
+>  people: [[name, age]; [Alice, 31], [Bob, 27]],
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.brace.square.begin.nushell
+#           ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell meta.brace.square.begin.nushell
+#            ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell string.bare.nushell
+#                ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell punctuation.separator.nushell
+#                 ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell
+#                  ^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell string.bare.nushell
+#                     ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell meta.brace.square.end.nushell
+#                      ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell
+#                        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell meta.brace.square.begin.nushell
+#                         ^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell string.bare.nushell
+#                              ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell punctuation.separator.nushell
+#                               ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell
+#                                ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell constant.numeric.nushell
+#                                  ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell meta.brace.square.end.nushell
+#                                   ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell punctuation.separator.nushell
+#                                    ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell
+#                                     ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell meta.brace.square.begin.nushell
+#                                      ^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell string.bare.nushell
+#                                         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell punctuation.separator.nushell
+#                                          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell
+#                                           ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell constant.numeric.nushell
+#                                             ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.table.nushell meta.brace.square.end.nushell
+#                                              ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.brace.square.end.nushell
+#                                               ^^ source.nushell meta.expression.braced.nushell
+>  nested: {
+#^^ source.nushell meta.expression.braced.nushell
+#  ^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell punctuation.section.block.begin.bracket.curly.nushell
+>    "quoted key": "value",
+#^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell
+#    ^^^^^^^^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell variable.other.nushell
+#                ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#                 ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#                  ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell punctuation.definition.string.begin.nushell
+#                   ^^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell
+#                        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell string.quoted.double.nushell punctuation.definition.string.end.nushell
+#                         ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell
+>    list: [1, 2, 3],
+#^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell
+#    ^^^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell string.bare.nushell variable.other.nushell
+#        ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell keyword.control.nushell
+#         ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell
+#          ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.brace.square.begin.nushell
+#           ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell constant.numeric.nushell
+#            ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell punctuation.separator.nushell
+#             ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell
+#              ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell constant.numeric.nushell
+#               ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell punctuation.separator.nushell
+#                ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell
+#                 ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell constant.numeric.nushell
+#                  ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.table.nushell meta.brace.square.end.nushell
+#                   ^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell
+>  },
+#^^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell
+#  ^ source.nushell meta.expression.braced.nushell meta.record-entry.nushell meta.expression.braced.nushell punctuation.section.block.end.bracket.curly.nushell
+#   ^^ source.nushell meta.expression.braced.nushell
+>}
+#^ source.nushell meta.expression.braced.nushell punctuation.section.block.end.bracket.curly.nushell
+>
