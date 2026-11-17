@@ -1,7 +1,7 @@
 # Orca worktree setup — https://www.onorca.dev/docs/model/worktrees
 #
 # meta and docs are symlinks to the maintainer's notes folder, which lives outside the
-# repository and is synced between machines (AGENTS.md, "The meta and docs symlinks"). A new
+# repository and is synced between machines (AGENTS.md, "Checking a change"). A new
 # worktree would start without them. Listed here, Orca gives each new worktree its own meta
 # and docs, taken from the primary checkout, so the notes follow every piece of work.
 #
