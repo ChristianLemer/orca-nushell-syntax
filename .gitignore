@@ -8,3 +8,8 @@ node_modules
 .DS_Store
 
 .orca
+
+# The snapshot tool writes beside the file it reads, so the tests work on copies of the
+# samples. Only the snapshots are kept.
+tests/snapshots/*
+!tests/snapshots/*.snap

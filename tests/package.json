@@ -1,0 +1,14 @@
+{
+  "name": "orca-nushell-syntax-tests",
+  "private": true,
+  "description": "Token snapshots of the samples. A development check: the plugin itself runs no code.",
+  "license": "MIT",
+  "scripts": {
+    "pretest": "node -e \"for (const f of ['sample.nu','sample.nuon']) fs.copyFileSync('../samples/'+f, 'snapshots/'+f)\"",
+    "test": "vscode-tmgrammar-snap -g ../syntaxes/nushell.tmLanguage.json -s source.nushell \"snapshots/sample.nu\" \"snapshots/sample.nuon\"",
+    "update": "npm test -- --updateSnapshot"
+  },
+  "devDependencies": {
+    "vscode-tmgrammar-test": "0.1.3"
+  }
+}
