@@ -65,6 +65,9 @@ and carries a `vX.Y.Z` tag on a commit whose `orca-plugin.json` says `X.Y.Z`. Th
 are the maintainer's.
 
 - Leave `publisher` out of the manifest; Orca takes the repository owner.
-- The release commit changes only the `version`, with the message `Bump to X.Y.Z`.
+- A change someone who installs the plugin would notice gets a line in `CHANGELOG.md`, under
+  "Unreleased", in the pull request that makes it.
+- The release commit changes only the `version` and turns the changelog's "Unreleased" into
+  `X.Y.Z (date)`, with the message `Bump to X.Y.Z`.
 - Cover and screenshot (`images/`, with `cover.alt`) come with the first release, in a commit
   before the bump.
