@@ -2,8 +2,9 @@
 
 # Bring syntaxes/nushell.tmLanguage.json in step with nushell/vscode-nushell-lang.
 #
-# The grammar is copied byte for byte. The upstream commit it comes from is written into
-# the README's credits, and printed so the sync commit's message can name it.
+# The grammar and upstream's license are copied byte for byte, from the same commit. That
+# commit is written into the README's credits, and printed so the sync commit's message can
+# name it.
 def main [
   ref: string = "main"  # upstream branch, tag or commit to sync from
 ] {
@@ -23,6 +24,8 @@ def main [
   let sha = http get $"https://api.github.com/repos/($repo)/commits/($ref)" | get sha
   http get --raw $"https://raw.githubusercontent.com/($repo)/($sha)/syntaxes/nushell.tmLanguage.json"
   | save --raw --force ($root | path join syntaxes nushell.tmLanguage.json)
+  http get --raw $"https://raw.githubusercontent.com/($repo)/($sha)/LICENSE"
+  | save --raw --force ($root | path join syntaxes nushell-LICENSE.txt)
 
   $text
   | str replace --regex $marker $"upstream commit `($sha)`"

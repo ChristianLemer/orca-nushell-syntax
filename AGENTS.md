@@ -11,6 +11,7 @@ Gleam plugin (`stablyai/orca-plugins`, `plugins/gleam`).
 ```
 orca-plugin.json                      manifest; id "nushell-syntax", never "orca-…"
 syntaxes/nushell.tmLanguage.json      upstream grammar, verbatim
+syntaxes/nushell-LICENSE.txt          upstream's license, verbatim
 syntaxes/language-configuration.json  comments, brackets, auto-closing and surrounding pairs
 scripts/sync-grammar.nu               fetches the grammar at an upstream commit
 samples/sample.nu, sample.nuon        the files to open in Orca and look at
@@ -49,11 +50,13 @@ allowed in plugin content"). They are never committed, so an install from Git ne
 
 ## The grammar
 
-- `syntaxes/nushell.tmLanguage.json` is upstream's file, unchanged. Update it only with
-  `scripts/sync-grammar.nu`, in a commit of its own whose message names the upstream commit.
+- `syntaxes/nushell.tmLanguage.json` and `syntaxes/nushell-LICENSE.txt` are upstream's files,
+  unchanged. Update them only with `scripts/sync-grammar.nu`, in a commit of its own whose
+  message names the upstream commit.
 - Whether to patch it locally is not decided yet. Until then, don't edit it by hand: report
   what looks wrong, with the sample line that shows it.
-- Keep the attribution in `LICENSE` and the README's credits.
+- Keep the attribution: upstream's license beside the grammar, and the README's credits.
+  `LICENSE` holds the plugin's own MIT text only, so that GitHub recognizes it.
 
 ## Release
 

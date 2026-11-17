@@ -33,4 +33,5 @@ This plugin packages it for Orca; `scripts/sync-grammar.nu` brings it in step wi
 
 ## License
 
-MIT. See [LICENSE](LICENSE), which also carries the grammar's notice.
+MIT. See [LICENSE](LICENSE). The grammar keeps its own MIT notice, in
+[syntaxes/nushell-LICENSE.txt](syntaxes/nushell-LICENSE.txt).
