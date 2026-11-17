@@ -1,0 +1,37 @@
+name: Highlighting problem
+description: Something is colored wrongly, or not colored at all.
+labels: [highlighting]
+body:
+  - type: textarea
+    id: code
+    attributes:
+      label: The code that shows it
+      description: The shortest Nushell or NUON that shows the problem.
+      render: nushell
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What you see, and what you expected
+      description: A screenshot helps.
+    validations:
+      required: true
+  - type: dropdown
+    id: vscode
+    attributes:
+      label: Is it wrong in VS Code with the Nushell extension too?
+      description: If it is, the fix belongs upstream, in nushell/vscode-nushell-lang.
+      options:
+        - "Not checked"
+        - "No, VS Code colors it correctly"
+        - "Yes, VS Code is wrong too"
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Orca and plugin versions
+      placeholder: Orca 1.4.253, plugin 0.1.0
+    validations:
+      required: true
