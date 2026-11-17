@@ -3,7 +3,7 @@
 What changed for someone who installs the plugin, newest first. Versions follow
 [semantic versioning](https://semver.org).
 
-## Unreleased
+## 0.1.1 (2026-11-17)
 
 - The grammar's license ships beside it as `syntaxes/nushell-LICENSE.txt`.
 - The manifest names the plugin's author.
