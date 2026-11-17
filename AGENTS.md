@@ -76,8 +76,14 @@ allowed in plugin content"). They are never committed, so an install from Git ne
   unchanged. Update them only with `scripts/sync-grammar.nu`, in a commit of its own whose
   message names the upstream commit. Update the token snapshots in the commit after it, so
   their diff shows what the sync changed.
-- Whether to patch it locally is not decided yet. Until then, don't edit it by hand: report
-  what looks wrong, with the sample line that shows it.
+- This repository stays downstream: it never patches the grammar. A wrong color is fixed in
+  [nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang), and reaches
+  the plugin at the next sync. Report it upstream, with the shortest code that shows it, and
+  link the upstream issue from any issue here.
+- Local patches come back on the table only when a fix Orca needs is refused upstream or left
+  waiting. That is the maintainer's decision, not an agent's.
+- Something upstream does not do (an injection grammar for Markdown, a reduced grammar for
+  `.nuon`) is not a patch: it goes in a file of its own beside upstream's.
 - Keep the attribution: upstream's license beside the grammar, and the README's credits.
   `LICENSE` holds the plugin's own MIT text only, so that GitHub recognizes it.
 
