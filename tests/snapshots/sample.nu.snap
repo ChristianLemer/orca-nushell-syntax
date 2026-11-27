@@ -927,27 +927,33 @@
 ># Type aliases and strict externs (Nushell 0.117)
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.nushell comment.nushell
 >type Point = record<x: float, y: float>
-#^^^^ source.nushell meta.command.nushell entity.name.type.external.nushell
-#    ^ source.nushell meta.command.nushell
-#     ^^^^^ source.nushell meta.command.nushell string.bare.nushell
-#          ^ source.nushell meta.command.nushell
-#           ^ source.nushell meta.command.nushell keyword.control.nushell
-#            ^ source.nushell meta.command.nushell
-#             ^^^^^^^^^ source.nushell meta.command.nushell string.bare.nushell
-#                      ^ source.nushell meta.command.nushell
-#                       ^^^^^ source.nushell meta.command.nushell string.bare.nushell
-#                            ^^ source.nushell meta.command.nushell
-#                              ^^ source.nushell meta.command.nushell string.bare.nushell
-#                                ^ source.nushell meta.command.nushell
-#                                 ^^^^^^ source.nushell meta.command.nushell string.bare.nushell
+#^^^^ source.nushell storage.type.type.nushell
+#    ^ source.nushell
+#     ^^^^^ source.nushell entity.name.type.nushell
+#          ^ source.nushell
+#           ^ source.nushell keyword.control.nushell
+#            ^ source.nushell
+#             ^^^^^^ source.nushell meta.record.nushell entity.name.type.nushell
+#                   ^ source.nushell meta.record.nushell
+#                    ^ source.nushell meta.record.nushell variable.parameter.nushell
+#                     ^^ source.nushell meta.record.nushell
+#                       ^^^^^ source.nushell meta.record.nushell entity.name.type.nushell
+#                            ^^ source.nushell meta.record.nushell
+#                              ^ source.nushell meta.record.nushell variable.parameter.nushell
+#                               ^^ source.nushell meta.record.nushell
+#                                 ^^^^^ source.nushell meta.record.nushell entity.name.type.nushell
+#                                      ^ source.nushell meta.record.nushell
 >type Polygon = list<Point>
-#^^^^ source.nushell meta.command.nushell entity.name.type.external.nushell
-#    ^ source.nushell meta.command.nushell
-#     ^^^^^^^ source.nushell meta.command.nushell string.bare.nushell
-#            ^ source.nushell meta.command.nushell
-#             ^ source.nushell meta.command.nushell keyword.control.nushell
-#              ^ source.nushell meta.command.nushell
-#               ^^^^^^^^^^^ source.nushell meta.command.nushell string.bare.nushell
+#^^^^ source.nushell storage.type.type.nushell
+#    ^ source.nushell
+#     ^^^^^^^ source.nushell entity.name.type.nushell
+#            ^ source.nushell
+#             ^ source.nushell keyword.control.nushell
+#              ^ source.nushell
+#               ^^^^ source.nushell meta.list.nushell entity.name.type.nushell
+#                   ^ source.nushell meta.list.nushell
+#                    ^^^^^ source.nushell meta.list.nushell entity.name.type.nushell
+#                         ^ source.nushell meta.list.nushell
 >def first-x [poly: Polygon]: nothing -> float { $poly.0.x }
 #^^^ source.nushell storage.type.function.nushell
 #   ^ source.nushell
@@ -974,8 +980,10 @@
 >extern --strict git [--verbose]
 #^^^^^^ source.nushell storage.type.function.nushell
 #      ^ source.nushell
-#       ^^^^^^^^ source.nushell entity.name.function.nushell
-#               ^^^^^ source.nushell
+#       ^^^^^^^^ source.nushell storage.modifier.nushell
+#               ^ source.nushell
+#                ^^^ source.nushell entity.name.function.nushell
+#                   ^ source.nushell
 #                    ^ source.nushell meta.function.parameters.nushell meta.brace.square.begin.nushell
 #                     ^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell keyword.control.nushell
 #                       ^^^^^^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell
@@ -984,7 +992,9 @@
 #^^^^^^ source.nushell storage.type.function.nushell
 #      ^ source.nushell
 #       ^^^^^^^^^^^^ source.nushell entity.name.function.nushell
-#                   ^^^^^^^^^^^^^^^ source.nushell
+#                   ^ source.nushell
+#                    ^^^^^^^^^^^^^ source.nushell storage.modifier.nushell
+#                                 ^ source.nushell
 #                                  ^ source.nushell meta.function.parameters.nushell meta.brace.square.begin.nushell
 #                                   ^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell keyword.control.nushell
 #                                     ^^^^^^^^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell
