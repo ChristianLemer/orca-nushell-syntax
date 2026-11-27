@@ -47,7 +47,7 @@ with the line that shows it. [CONTRIBUTING.md](CONTRIBUTING.md) says how to chec
 The grammar is `syntaxes/nushell.tmLanguage.json` from
 [nushell/vscode-nushell-lang](https://github.com/nushell/vscode-nushell-lang), by the Nushell
 Project Developers, under the MIT license. It is copied unchanged, currently from
-upstream commit `ffd0e93105a9bad1303583a43f47eae7d0e34dab`.
+upstream commit `5d42e9a7c53398ef767b7cb7190e7c9c92628c2d`.
 This plugin packages it for Orca; `scripts/sync-grammar.nu` brings it in step with upstream.
 
 ## License

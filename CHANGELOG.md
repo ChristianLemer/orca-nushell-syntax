@@ -3,6 +3,11 @@
 What changed for someone who installs the plugin, newest first. Versions follow
 [semantic versioning](https://semver.org).
 
+## Unreleased
+
+- Nushell 0.117: type aliases (`type Name = <type>`, `export type`) and flags on `extern`, such
+  as `--strict`, are highlighted. The grammar is now upstream's commit `5d42e9a7c533`.
+
 ## 0.1.1 (2026-11-17)
 
 - The grammar's license ships beside it as `syntaxes/nushell-LICENSE.txt`.

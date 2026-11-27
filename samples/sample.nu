@@ -91,3 +91,10 @@ overlay use greetings
 def typed [data: record<name: string, age: int>, rows: list<string>]: table -> list<any> {
   $data | values
 }
+
+# Type aliases and strict externs (Nushell 0.117)
+type Point = record<x: float, y: float>
+type Polygon = list<Point>
+def first-x [poly: Polygon]: nothing -> float { $poly.0.x }
+extern --strict git [--verbose]
+extern "git status" --strict=true [--short(-s)]
