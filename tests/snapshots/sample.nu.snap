@@ -924,3 +924,69 @@
 >}
 #^ source.nushell meta.function.body.nushell punctuation.definition.function.end.nushell
 >
+># Type aliases and strict externs (Nushell 0.117)
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.nushell comment.nushell
+>type Point = record<x: float, y: float>
+#^^^^ source.nushell meta.command.nushell entity.name.type.external.nushell
+#    ^ source.nushell meta.command.nushell
+#     ^^^^^ source.nushell meta.command.nushell string.bare.nushell
+#          ^ source.nushell meta.command.nushell
+#           ^ source.nushell meta.command.nushell keyword.control.nushell
+#            ^ source.nushell meta.command.nushell
+#             ^^^^^^^^^ source.nushell meta.command.nushell string.bare.nushell
+#                      ^ source.nushell meta.command.nushell
+#                       ^^^^^ source.nushell meta.command.nushell string.bare.nushell
+#                            ^^ source.nushell meta.command.nushell
+#                              ^^ source.nushell meta.command.nushell string.bare.nushell
+#                                ^ source.nushell meta.command.nushell
+#                                 ^^^^^^ source.nushell meta.command.nushell string.bare.nushell
+>type Polygon = list<Point>
+#^^^^ source.nushell meta.command.nushell entity.name.type.external.nushell
+#    ^ source.nushell meta.command.nushell
+#     ^^^^^^^ source.nushell meta.command.nushell string.bare.nushell
+#            ^ source.nushell meta.command.nushell
+#             ^ source.nushell meta.command.nushell keyword.control.nushell
+#              ^ source.nushell meta.command.nushell
+#               ^^^^^^^^^^^ source.nushell meta.command.nushell string.bare.nushell
+>def first-x [poly: Polygon]: nothing -> float { $poly.0.x }
+#^^^ source.nushell storage.type.function.nushell
+#   ^ source.nushell
+#    ^^^^^^^ source.nushell entity.name.function.nushell
+#           ^ source.nushell
+#            ^ source.nushell meta.function.parameters.nushell meta.brace.square.begin.nushell
+#             ^^^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell
+#                 ^^ source.nushell meta.function.parameters.nushell
+#                   ^^^^^^^ source.nushell meta.function.parameters.nushell entity.name.type.nushell
+#                          ^ source.nushell meta.function.parameters.nushell meta.brace.square.end.nushell
+#                           ^^ source.nushell
+#                             ^^^^^^^ source.nushell entity.name.type.nushell
+#                                    ^ source.nushell
+#                                     ^^ source.nushell keyword.operator.nushell
+#                                       ^ source.nushell
+#                                        ^^^^^ source.nushell entity.name.type.nushell
+#                                             ^ source.nushell
+#                                              ^ source.nushell meta.function.body.nushell punctuation.definition.function.begin.nushell
+#                                               ^ source.nushell meta.function.body.nushell
+#                                                ^^^^^ source.nushell meta.function.body.nushell variable.other.nushell
+#                                                     ^^^^ source.nushell meta.function.body.nushell variable.other.nushell
+#                                                         ^ source.nushell meta.function.body.nushell
+#                                                          ^ source.nushell meta.function.body.nushell punctuation.definition.function.end.nushell
+>extern --strict git [--verbose]
+#^^^^^^ source.nushell storage.type.function.nushell
+#      ^ source.nushell
+#       ^^^^^^^^ source.nushell entity.name.function.nushell
+#               ^^^^^ source.nushell
+#                    ^ source.nushell meta.function.parameters.nushell meta.brace.square.begin.nushell
+#                     ^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell keyword.control.nushell
+#                       ^^^^^^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell
+#                              ^ source.nushell meta.function.parameters.nushell meta.brace.square.end.nushell
+>extern "git status" --strict=true [--short(-s)]
+#^^^^^^ source.nushell storage.type.function.nushell
+#      ^ source.nushell
+#       ^^^^^^^^^^^^ source.nushell entity.name.function.nushell
+#                   ^^^^^^^^^^^^^^^ source.nushell
+#                                  ^ source.nushell meta.function.parameters.nushell meta.brace.square.begin.nushell
+#                                   ^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell keyword.control.nushell
+#                                     ^^^^^^^^^ source.nushell meta.function.parameters.nushell variable.parameter.nushell
+#                                              ^ source.nushell meta.function.parameters.nushell meta.brace.square.end.nushell
+>
